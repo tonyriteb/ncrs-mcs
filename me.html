@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Test</title>
+    
+    <link href="./src/css/font-awesome.css" rel="Stylesheet">
+    <link rel="Stylesheet" href="./src/css/sidenavigation.css">
+    <!-- <link href="./src/css/bootstrap.css" rel="Stylesheet"> -->
+
+</head>
+<body>
+    <div class="navigation">
+        <div class="menuToggle"></div>
+       
+            <ul>
+                <li class="list active">
+                    <a href="#" style="--clr: #fd2205;">
+                        <span class="icon">
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" style="--clr: #e77305;">
+                        <span class="icon">
+                            <i class="fa fa-book"></i>
+                        </span>
+                        <span class="text">Loans Mgt.</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" style="--clr: #05258f;">
+                        <span class="icon">
+                            <i class="fa fa-sort-amount-asc"></i>
+                        </span>
+                        <span class="text">Contributions</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" style="--clr: #e77305;">
+                        <span class="icon">
+                            <i class="fa fa-credit-card"></i>
+                        </span>
+                        <span class="text">Withdrawals</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" style="--clr: #e77305;">
+                        <span class="icon">
+                            <i class="fa fa-calendar"></i>
+                        </span>
+                        <span class="text">Statements</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="#" style="--clr: #4d8602;">
+                        <span class="icon">
+                            <i class="fa fa-cog"></i>
+                        </span>
+                        <span class="text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+
+    </div>
+
+    <!-- <script type="text/javascript" src="./src/js/app.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./src/js/jquery.js"></script>
+    <script type="text/javascript" src="./src/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="./src/js/bootstrap.js"></script> -->
+    <script>
+        let menuToggle = document.querySelector('.menuToggle');
+        let navigation = document.querySelector('.navigation');
+
+        menuToggle.onclick = function(){
+            navigation.classList.toggle('active')
+        }
+
+        let list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active')
+        }
+        list.forEach((item) =>
+        item.addEventListener('click',activeLink));
+    </script>
+</body>
+</html>
