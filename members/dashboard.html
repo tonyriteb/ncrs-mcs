@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThriftGate: Dashboard</title>
+    <!-- site Favicon -->
+    <link rel="shortcut icon" href="../src/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../src/img/favicon.png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="../src/img/favicon.png" />
+
+    <link rel="Stylesheet" href="../src/css/style2.css">
+    <!-- <link rel="Stylesheet" href="../src/css/tables.css"> -->
+    <!-- <link rel="Stylesheet" href="../src/css/bootstrap.css"> -->
+    <!-- <link rel="Stylesheet" href="../src/css/bootstrap.min.css"> -->
+    <!-- <link href="../src/css/bootstrap1.css" rel="Stylesheet"> -->
+    <link href="../src/css/font-awesome.css" rel="Stylesheet">
+    <link href="../src/plugins/sky-forms.css" rel="Stylesheet">
+    <link href="../src/plugins/custom-sky-forms.css" rel="Stylesheet">
+<body>
+    <header id="header">
+        <div class="wrap-logo">
+            <div class="login-logo">
+                <img src="../src/img/logo3.png" />
+            </div>
+            <!-- <div class="head-logo">
+            </div> -->
+            <div class="head-text">
+                <h3><span>ThriftGate&trade;</span><br> NCRS Multi-Purpose Cooperative Society<br> Cooperative Management Software</h3></h3>
+            </div>
+
+        </div>
+        
+        <!-- Right Side Cotext -->
+        <div class="head-right-menu">
+            <div class="head-right-menu-img">
+
+            </div>
+            <div class="head-right-menu-link">
+                <h4>Welcome! Anthony</h4>
+                <a href="#"><i class="fa fa-chevron-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Menu -->
+    <div class="navigation">
+        <div class="menuToggle"></div>
+
+
+        <ul>
+            <li class="list active">
+                <a href="#" style="--clr: #417736;">
+                    <span class="icon">
+                        <i class="fa fa-home"></i>
+                    </span>
+                    <span class="text">My Profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr: #417736">
+                    <span class="icon">
+                        <i class="fa fa-book"></i>
+                    </span>
+                    <span class="text">Loan Request</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr: #417736;">
+                    <span class="icon">
+                        <i class="fa fa-sort-amount-asc"></i>
+                    </span>
+                    <span class="text">My Savings</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr: #417736;">
+                    <span class="icon">
+                        <i class="fa fa-credit-card"></i>
+                    </span>
+                    <span class="text">My Withdrawals</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr: #417736;">
+                    <span class="icon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                    <span class="text">My Statements</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#" style="--clr: #417736;">
+                    <span class="icon">
+                        <i class="fa fa-cog"></i>
+                    </span>
+                    <span class="text">Transactions</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-pane">
+        <div class="disp-container">
+            <div class="disp-img">
+                <div class="upload-btn">
+                    <a href="#">Change</a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="disp">
+            <div class="col0">
+                <div class="col0-name">
+                    <i class="fa fa-user"></i>
+                    <h5>RITEB, ANTHONY CHETMEN &nbsp;-&nbsp; MCS0001</h5>
+                </div>
+            </div>
+            
+            <div class="col-info">
+                <div class="col1">
+                    <div class="col1-title">
+                        <i class="fa fa-cubes"></i>
+                        <h5>Net Savings:</h5>
+                    </div>
+                    <div class="net-contribution" id="net-contribution">
+                        <span><h3 class="symb">N</h3></span>
+                        <h3>&nbsp;12,386,637.56</h3>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="col1-title">
+                        <i class="fa fa-sort-amount-asc"></i>
+                        <h5>Monthly Savings:</h5>
+                    </div>
+                    <div class="mnth-contribution" id="mnth-contribution">
+                        <span><h3 class="symb">N</h3></span>
+                        <h3>&nbsp;76,624.34</h3>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="col1-title">
+                        <i class="fa fa-sort-amount-desc"></i>
+                        <h5>Monthly Loan Deduction:</h5>
+                    </div>
+                    <div class="loan-deduction" id="loan-deduction">
+                        <span><h3 class="symb">N</h3></span>
+                        <h3>&nbsp;45,647.54</h3>
+                    </div>
+                </div>
+                <div class="col4">
+                    <div class="col1-title">
+                        <i class="fa  fa-get-pocket"></i>
+                        <h5>Net Dividends:</h5>
+                    </div>
+                    <div class="net-dividend" id="net-dividend">
+                        <span><h3 class="symb">N</h3></span>
+                        <h3>&nbsp;45,647.54</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-tab-pane hidden" id="0">
+            <!-- Tab v2 -->
+            <div class="tab-v2">
+                <ul class="nav nav-tabs">
+                        <li class="active"><a href="#home-1" data-toggle="tab">Profile</a></li>
+                        <li><a href="#profile-1" data-toggle="tab">Update Profile</a></li>
+                        <li><a href="#settings-1" data-toggle="tab">Settings</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="home-1">
+                        <h4>Profile</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+
+                        <label class="label-display">Anthony</label>
+                        <label class="label-display">Chetmen</label>
+                        <label class="label-display">Riteb</label>
+                        <label class="label-display">Single</label>
+                        <label class="label-display">Nigerian</label>
+                        <label class="label-display">08161364415</label>
+                        <label class="label-display">riteb.tony@gmail.com</label>
+                        <label class="label-display">Address</label>
+                        <label class="label-display">Age</label>
+                        <label class="label-display">NoK Name</label>
+                        <label class="label-display">Nok Phone</label>
+                        <label class="label-display">08161364415</label>
+                        
+                        <div class="col-info">
+                            <div class="col1">
+                                <div class="input ">
+                                    <div class="input btn-row">
+                                        <!-- <button type="reset" class="btn-def" action="" >Clear</button> -->
+                                        <button type="submit" class="btn-def2" ><i class="fa fa-refresh"></i> Refresh</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="profile-1">
+                        <h4>Update</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                        
+                        <form action="">
+                            <div class="profile-input">
+                                <div class="wrap">
+                                    <input class="input" type="text" placeholder="First Name" />
+                                    <input class="input" type="text" placeholder="Middle Name" />
+                                    <input class="input" type="text" placeholder="Last Name" />
+                                    <input class="input" type="text" placeholder="Marital Status" />
+                                    <input class="input" type="text" placeholder="Nationality" />
+                                    <input class="input" type="text" placeholder="Phone" />
+                                    <input class="input" type="text" placeholder="Email" />
+                                    <input class="input" type="text" placeholder="Address" />
+                                    <input class="input" type="text" placeholder="DoB" />
+                                    <input class="input" type="text" placeholder="NoK Name" />
+                                    <input class="input" type="text" placeholder="Nok Phone" />
+                                </div>
+                                
+                            </div>
+                            
+    
+                            <div class="col-info">
+                                <div class="col1">
+                                    <div class="input ">
+                                        <div class="input btn-row">
+                                            <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Clear</button>
+                                            <button type="submit" class="btn-def2" ><i class="fa fa-check-square-o"></i> Update Profile</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </form>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="settings-1">
+                        <h4>Settings</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                    </div>
+                        
+                </div>
+            </div>
+            <!-- End Tab v2 -->
+        </div>
+
+        <div class="profile-tab-pane hidden" id="1">
+            <!-- Tab v2 -->
+            <div class="tab-v2">
+                <ul class="nav nav-tabs">
+                        <li class="active"><a href="#loan-1" data-toggle="tab">Loan Request</a></li>
+                        <li><a href="#loan-2" data-toggle="tab">Manage Loan</a></li>
+                        <li><a href="#loan-3" data-toggle="tab">Loan History</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="loan-1">
+                        <h4>Loan Request</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                        <form action="">
+                            <div class="input-inline">
+                                <div class="col-tab">
+                                    <div class="col-tab-col">
+                                        <div class="col-info">
+                                            
+                                                <div class="col1">
+                                                    <div class="col1-title">
+                                                        <i class="fa fa-money"></i>
+                                                        <h5>Loan Amount:</h5>
+                                                    </div>
+                                                    <div class="input" >
+                                                        <input class="input-field" type="text" placeholder="Loan Amount" />
+                                                    </div>
+                                                
+                                                </div>
+                
+                                                <div class="col1">
+                                                    <div class="col1-title">
+                                                        <i class="fa fa-hourglass-half"></i>
+                                                        <h5>Loan Duration:</h5>
+                                                    </div>
+                                                    <div class="input" >
+                                                        <select name="tenure">
+                                                            <option value="1">1 month</option>
+                                                            <option value="2">2 months</option>
+                                                            <option value="3">3 months</option>
+                                                            <option value="4">4 months</option>
+                                                            <option value="5">5 months</option>
+                                                            <option value="6">6 months</option>
+                                                            <option value="7">7 months</option>
+                                                            <option value="8">8 months</option>
+                                                            <option value="9">9 months</option>
+                                                            <option value="10">10 months</option>
+                                                            <option value="11">11 months</option>
+                                                            <option value="12">12 months</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+        
+                                        <div class="col-info2">
+                                            <div class="col1">
+                                                <div class="col1-title">
+                                                    <i class="fa fa-calendar-check-o"></i>
+                                                    <!-- <h5>Loan Type:</h5> -->
+                                                    <!-- <label><input class="radio" type="radio" name="loan-type"><i class="radio"></i>Regular</label>
+                                                    <label><input class="radio" type="radio" name="loan-type"><i class="radio"></i>Emergency</label> -->
+        
+                                                    <input class="radio" type="radio" name="loan-type"><i class="radio">Regular</i>
+                                                    <input class="radio" type="radio" name="loan-type"><i class="radio">Emergency</i>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="input" id="">
+                                                    <div class="input" id="">
+                                                        <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Clear</button>
+                                                        <button type="submit" class="btn-def2" ><i class="fa fa-check-square-o"></i> Request Loan</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-tab-col2">
+
+                                        <i class="fa fa-object-group"></i>
+                                        <h5>Loan Details:</h5>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="loan-2">
+                        <h4>Manage Loan</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                        <form action="">
+                            <div class="input-inline">
+                            
+                                <div class="col-tab">
+                                    <div class="col-tab-col3">
+                                        <div class="col-info">
+                                            <div class="loan-table">
+                                                <!--Table Striped-->
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>Loan Amount</th>
+                                                            <th>Loan ID</th>
+                                                            <!-- <th>Date</th> -->
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>50,000.00</td>
+                                                            <td>42674</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2.</td>
+                                                            <td>300,000.00</td>
+                                                            <td>72870</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3.</td>
+                                                            <td>45,647.54</td>
+                                                            <td>34524</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4.</td>
+                                                            <td>500,000.00</td>
+                                                            <td>42674</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5.</td>
+                                                            <td>110,000.00</td>
+                                                            <td>42674</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6.</td>
+                                                            <td>200,000.00</td>
+                                                            <td>42674</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7.</td>
+                                                            <td>450,000.00</td>
+                                                            <td>42674</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <!--End Table Striped-->
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-tab-col">
+                                        <div class="col-info">
+                                            
+                                                <div class="col1">
+                                                    <div class="col1-title">
+                                                        <i class="fa fa-money"></i>
+                                                        <h5>Loan Amount:</h5>
+                                                    </div>
+                                                    <div class="input" >
+                                                        <input class="input-field" type="text" placeholder="Loan Amount" />
+                                                    </div>
+                                                
+                                                </div>
+                
+                                                <div class="col1">
+                                                    <div class="col1-title">
+                                                        <i class="fa fa-hourglass-half"></i>
+                                                        <h5>Loan Duration:</h5>
+                                                    </div>
+                                                    <div class="input" >
+                                                        <select name="tenure">
+                                                            <option value="1">1 month</option>
+                                                            <option value="2">2 months</option>
+                                                            <option value="3">3 months</option>
+                                                            <option value="4">4 months</option>
+                                                            <option value="5">5 months</option>
+                                                            <option value="6">6 months</option>
+                                                            <option value="7">7 months</option>
+                                                            <option value="8">8 months</option>
+                                                            <option value="9">9 months</option>
+                                                            <option value="10">10 months</option>
+                                                            <option value="11">11 months</option>
+                                                            <option value="12">12 months</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            
+                                        </div>
+        
+                                        <div class="col-info2">
+                                            <div class="col1">
+                                                <div class="col1-title">
+                                                    <i class="fa fa-calendar-check-o"></i>
+                                                    <!-- <h5>Loan Type:</h5> -->
+                                                    <!-- <label><input class="radio" type="radio" name="loan-type"><i class="radio"></i>Regular</label>
+                                                    <label><input class="radio" type="radio" name="loan-type"><i class="radio"></i>Emergency</label> -->
+        
+                                                    <input class="radio" type="radio" name="loan-type"/><i class="radio">Regular</i>
+                                                    <input class="radio" type="radio" name="loan-type"/><i class="radio">Emergency</i>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="input">
+                                                    <div class="input">
+                                                        <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Clear</button>
+                                                        <button type="submit" class="btn-def2" ><i class="fa fa-check-square-o"></i> Update Request</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-tab-col2">
+                                        <i class="fa fa-object-group"></i>
+                                        <h5>Loan Details:</h5>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                        
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="loan-3">
+                        <h4>Loan History</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates vel nesciunt quos nostrum quam ducimus consequuntur reprehenderit. Nobis dolore labore excepturi, veniam eius molestiae quis minima sunt quod omnis quo rem quos, animi adipisci esse dicta beatae iure similique porro tenetur. Unde ipsa nihil, debitis veniam pariatur enim iusto.</p>
+                        <div class="stmt-table">
+                            <!--Table Striped-->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Loan Amount</th>
+                                        <th>Loan ID</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>50,000.00</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-warning">Regular</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>300,000.00</td>
+                                        <td>72870</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-success">Emergency</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-info">Regular</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>500,000.00</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Regular</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.</td>
+                                        <td>110,000.00</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Emergency</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.</td>
+                                        <td>200,000.00</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Regular</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.</td>
+                                        <td>450,000.00</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Regular</span></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            <!--End Table Striped-->
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+            <!-- End Tab v2 -->
+        </div>
+        <div class="profile-tab-pane hidden" id="2">
+            <!-- Tab v2 -->
+            <div class="tab-v2">
+                <ul class="nav nav-tabs">
+                        <li class="active"><a href="#savings-1" data-toggle="tab">My Savings</a></li>
+                        <li><a href="#savings-2" data-toggle="tab">Manage Savings</a></li>
+                        <li><a href="#savings-3" data-toggle="tab">Savings History</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="savings-1">
+                        <h4>My Savings</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+
+                        <form action="">
+                            <div class="input-line">
+                                <div class="col-tab">
+                                    <div class="col-tab-col">
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="col1-title">
+                                                    <i class="fa fa-money"></i>
+                                                    <h5 class="input-title">Savings Amount:</h5>
+                                                </div>
+                                                <div class="input" >
+                                                    <input class="input-field" type="text" placeholder="Savings Amount" />
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="input ">
+                                                    <div class="input btn-row">
+                                                        <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Clear</button>
+                                                        <button type="submit" class="btn-def2" ><i class="fa fa-check-square-o"></i> Savings Request</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="savings-2">
+                        <h4>Manage Savings</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                        
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="savings-3">
+                        <h4>Savings History</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates vel nesciunt quos nostrum quam ducimus consequuntur reprehenderit. Nobis dolore labore excepturi, veniam eius molestiae quis minima sunt quod omnis quo rem quos, animi adipisci esse dicta beatae iure similique porro tenetur. Unde ipsa nihil, debitis veniam pariatur enim iusto.</p>
+
+                        <div class="stmt-table">
+                            <!--Table Striped-->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Savings Amount</th>
+                                        <th>Savings ID</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-warning">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-success">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-info">Credit</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--End Table Striped-->
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+            <!-- End Tab v2 -->
+        </div>
+        <div class="profile-tab-pane hidden" id="3">
+            <!-- Tab v2 -->
+            <div class="tab-v2">
+                <ul class="nav nav-tabs">
+                        <li class="active"><a href="#withdrawal-1" data-toggle="tab">New Withdrawal Request</a></li>
+                        <li><a href="#withdrawal-2" data-toggle="tab">Manage Withdrawal</a></li>
+                        <li><a href="#withdrawal-3" data-toggle="tab">Withdrawal History</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="withdrawal-1">
+                        <h4>Withdrawal Request</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+
+                        <form action="">
+                            <div class="input-line">
+                                <div class="col-tab">
+                                    <div class="col-tab-col">
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="col1-title">
+                                                    <i class="fa fa-money"></i>
+                                                    <h5 class="input-title">Withdrawal Amount:</h5>
+                                                </div>
+                                                <div class="input" >
+                                                    <input class="input-field" type="text" placeholder="Withdrawal Amount" />
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+
+                                        <div class="col-info">
+                                            <div class="col1">
+                                                <div class="input ">
+                                                    <div class="input btn-row">
+                                                        <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Clear</button>
+                                                        <button type="submit" class="btn-def2" ><i class="fa fa-check-square-o"></i> Withdraw</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="withdrawal-2">
+                        <h4>Manage Withdrawal</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+                        
+                        
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="withdrawal-3">
+                        <h4>Withdrawal History</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptates vel nesciunt quos nostrum quam ducimus consequuntur reprehenderit. Nobis dolore labore excepturi, veniam eius molestiae quis minima sunt quod omnis quo rem quos, animi adipisci esse dicta beatae iure similique porro tenetur. Unde ipsa nihil, debitis veniam pariatur enim iusto.</p>
+
+                        <div class="stmt-table">
+                            <!--Table Striped-->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Savings Amount</th>
+                                        <th>Savings ID</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-warning">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-success">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-info">Credit</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--End Table Striped-->
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+            <!-- End Tab v2 -->
+        </div>
+        <div class="profile-tab-pane hidden" id="4">
+            <!-- Tab v2 -->
+            <div class="tab-v2">
+                <ul class="nav nav-tabs">
+                        <li class="active"><a href="#statement-1" data-toggle="tab">Account Statement</a></li>
+                        <li><a href="#statement-2" data-toggle="tab">Statement History</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="statement-1">
+                        <h4>Generate Account Statement</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+
+                        <form action="#" id="sky-form" class="sky-form">
+                            <div class="date-range">
+                                <!-- <h4>Select Date Range</h4> -->
+                                
+                                <div class="col4">
+                                    <input class="date-input" type="date" name="start" id="start" placeholder="Start Date">
+                                    
+                                </div>
+                                <div class="col4">
+                                    <input class="date-input" type="date" name="finish" id="finish" placeholder="End Date">
+                                    
+                                </div>
+                                
+                                <div class="col4">
+                                    <button type="button" class="btn-load" ><i class="fa fa-external-link"></i> Load</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="stmt-table">
+                            <!--Table Striped-->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Savings Amount</th>
+                                        <th>Savings ID</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-warning">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-success">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-info">Credit</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--End Table Striped-->
+
+                            
+                        </div>
+
+                        <div class="statement-export">
+                            <div class="tab1">
+                                <div class="tab-space">
+                                    
+                                </div>
+                            </div>
+                            <div class="tab2">
+                                <div class="input ">
+                                    <div class="input btn-export">
+                                        <button type="reset" class="btn-def" action="" ><i class="fa fa-refresh"></i> Refresh</button>
+                                        <button type="submit" class="btn-def2" ><i class="fa fa-arrow-circle-down"></i> Export PDF</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade in" id="statement-2">
+                        <h4>Statement History</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus illo totam molestias voluptate laboriosam accusamus, praesentium officiis ipsam placeat ullam labore quos tempore quod officia eum hic harum ad iusto!</p>
+
+                        <div class="stmt-table">
+                            <!--Table Striped-->
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Savings Amount</th>
+                                        <th>Savings ID</th>
+                                        <th>Date</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-warning">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-success">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-danger">Credit</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4.</td>
+                                        <td>45,647.54</td>
+                                        <td>42674</td>
+                                        <td>04/01/2023 12.45.59.097</td>
+                                        <td><span class="label label-info">Credit</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--End Table Striped-->
+                        </div>
+                        
+                    </div>
+                        
+                </div>
+            </div>
+            <!-- End Tab v2 -->
+        </div>
+        <div class="profile-tab-pane hidden" id="5">
+            <h4>Transactions</h4>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-left">
+
+        </div>
+        <div class="footer-right">
+            <h3>ThriftGate&trade; Software &copy;Copyright 2023</h3>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="../src/js/app.js"></script>
+    <script type="text/javascript" src="../src/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/js/jquery.js"></script>
+    <script type="text/javascript" src="../src/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../src/js/validation.js"></script>
+    <script type="text/javascript" src="../src/js/masking.js"></script>
+    <script type="text/javascript" src="../src/plugins/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../src/plugins/jquery.form.min.js"></script>
+    <script type="text/javascript" src="../src/plugins/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../src/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../src/js/dashboard.js"></script>
+    <script type="text/javascript" src="../src/js/datepicker.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            App.init();
+            Masking.initMasking();
+            Datepicker.initDatepicker();
+            Validation.initValidation();
+        });
+    </script>
+</body>
+</html>
